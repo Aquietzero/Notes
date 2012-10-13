@@ -1,4 +1,4 @@
-# Solutions for Chapter [The Sample Space]
+# Solutions for Chapter [ The Sample Space ]
 
 ## Problem 1.
 
