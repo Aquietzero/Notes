@@ -49,6 +49,28 @@ The possibility of B lost is that
 
 Since P(a) &lt; P(b), so A is more likely to win.
 
+## Problem 15
+
+This is a basic supergeometric problem. The probability is
+
+    P = C(10, 90) / C(10, 100)
+
+## Problem 17
+
+1. Choose r persons between A and B, C(r, n - 2)
+2. Permutate them, C(r, n - 2)r!
+3. Permutate the rest persons, (n - r - 2)!
+4. Separate the rest persons into two groups, one on the left of A and the rest right of B, (n - r - 2)!(n - r - 1) = (n - r - 1)!
+5. Switch A and B.
+
+So the probability is
+
+       2 C(r, n-2)r! (n-r-1)!   2 (n-2)_r (n-r-1)!   2 (n-r-1)
+    P = --------------------- = ------------------ = ---------
+                 n!                     n!             n(n-1)
+
+For the second part of the problem, please refer to my blog.
+
 ## Problem 24
 
 (a) The problem is similar to randomly place n different balls into n different boxes, so the probability is 12!/12^12.
