@@ -63,13 +63,13 @@ Let's denote the shoes in the following way:
     a1, a2, a3, ... , an
     b1, b2, b3, ... , bn
 
-(a) Since there are no pairs, so each selected shoe belongs to different pairs of shoes. Hence we can choose 2r shoes from the n pairs of shoes, which gives the permutation of C(2r, n). Then since each pair of shoes has two shoes, we can choose one of them to represent a pair of shoes, which gives the permutation of 2^2r. So the final possibility is
+(a) Since there are no pairs, so each selected shoe belongs to different pairs of shoes. Hence we can choose 2r shoes from the n pairs of shoes, which gives the permutation of C(2r, n). Then since each pair of shoes has two shoes, we can choose one of them to represent a pair of shoes, which gives the permutation of 2^2r. So the final probability is
 
        C(2r, n) 2^2r
     p = ------------
          C(2r, 2n)
 
-(b) We can first choose the pair of shoes from those n pairs of shoes, then we choose 2r - 2 shoes from the left n - 1 pair of shoes. For the same reason, each pair of shoes has two shoes, which gives the final possibility as follows:
+(b) We can first choose the pair of shoes from those n pairs of shoes, then we choose 2r - 2 shoes from the left n - 1 pair of shoes. For the same reason, each pair of shoes has two shoes, which gives the final probability as follows:
 
        n C(2r-2, n-1) 2^2r
     p = -----------------
@@ -80,3 +80,24 @@ Let's denote the shoes in the following way:
        C(2, n) C(2r-4, n-2) 2^2r
     p = -----------------------
               C(2r, 2n)
+
+## Problem 27
+
+After the car owner returns, there are r cars still there. So we have to decide which cars have left, which has C(r-1, n-1) permutations since the car owner's car is there for sure. Then, since the car takes three parking places, its own place and two empty places next to it. So the permutation of the rest r - 1 cars is C(r-1, n-3). Hence, the probability is
+
+       C(r-1, n-3)
+    p = ---------
+       C(r-1, n-1)
+
+## Problem 28
+
+Select 2N children from the 4N children group to form group 1. Then in group 1, N boys are chosen from the 2N boys while N girls are chosen from the 2N grils. So the probability is
+
+    P = C(N, 2N) C(N, 2n) / C(2N, 4N)
+
+Using Stirling's formula to simplify the above formula, we have
+
+    P = C(N, 2N) C(N, 2n) / C(2N, 4N)
+            [(2N)!]^4
+      = ---------------- = sqrt(2/Nπ)
+         [(N!)]^4 (4N)!
