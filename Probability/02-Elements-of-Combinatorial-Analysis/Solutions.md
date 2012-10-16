@@ -48,3 +48,35 @@ The possibility of B lost is that
     P(b) = (5/6)^12 + 12(1/6)(5/6)^11 = 0.3813
 
 Since P(a) &lt; P(b), so A is more likely to win.
+
+## Problem 24
+
+(a) The problem is similar to randomly place n different balls into n different boxes, so the probability is 12!/12^12.
+(b) Firstly, the total permutation is 12^6. Then consider the problem as follows: (1) Choose 2 months from the 12 months of the year. Then we have C(2, 12) choices. (2) Each of the 6 person have two choices from these 2 months, which generates 2^6 permutations. But there are 2 special permutations in it, the first one is all 6 persons are both in the first month, the second one is that they both born in the second month. So the final probability is
+
+    P = C(2, 12) (2^6 - 2) / 12^6
+
+## Problem 26
+
+Let's denote the shoes in the following way:
+
+    a1, a2, a3, ... , an
+    b1, b2, b3, ... , bn
+
+(a) Since there are no pairs, so each selected shoe belongs to different pairs of shoes. Hence we can choose 2r shoes from the n pairs of shoes, which gives the permutation of C(2r, n). Then since each pair of shoes has two shoes, we can choose one of them to represent a pair of shoes, which gives the permutation of 2^2r. So the final possibility is
+
+       C(2r, n) 2^2r
+    p = ------------
+         C(2r, 2n)
+
+(b) We can first choose the pair of shoes from those n pairs of shoes, then we choose 2r - 2 shoes from the left n - 1 pair of shoes. For the same reason, each pair of shoes has two shoes, which gives the final possibility as follows:
+
+       n C(2r-2, n-1) 2^2r
+    p = -----------------
+            C(2r, 2n)
+
+(c) The method is quite similar to the above problem.
+
+       C(2, n) C(2r-4, n-2) 2^2r
+    p = -----------------------
+              C(2r, 2n)
